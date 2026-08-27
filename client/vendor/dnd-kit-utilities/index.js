@@ -1,0 +1,1 @@
+export const CSS = { Transform: { toString(transform) { if (!transform) return undefined; const x = Number(transform.x || 0); const y = Number(transform.y || 0); const scaleX = transform.scaleX ?? 1; const scaleY = transform.scaleY ?? 1; return `translate3d(${x}px, ${y}px, 0) scaleX(${scaleX}) scaleY(${scaleY})`; } } };

@@ -1,0 +1,50 @@
+{
+  "name": "react-jwt-mysql-client",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "file:vendor/dnd-kit-core",
+    "@dnd-kit/sortable": "file:vendor/dnd-kit-sortable",
+    "@dnd-kit/utilities": "file:vendor/dnd-kit-utilities",
+    "@reduxjs/toolkit": "2.12.0",
+    "@tailgrids/icons": "^2.0.0",
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.1.2",
+    "@types/prismjs": "^1.26.6",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@types/react-responsive-masonry": "^2.7.0",
+    "@types/swiper": "^5.4.3",
+    "axios": "^1.19.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.12",
+    "postcss": "^8.5.25",
+    "react": "19.2.8",
+    "react-aria-components": "^1.20.0",
+    "react-dom": "19.2.8",
+    "react-hot-toast": "^2.6.0",
+    "react-redux": "9.3.0",
+    "react-router-dom": "^7.11.0",
+    "swiper": "^14.0.7",
+    "tailgrids": "^2.3.0",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "^4.3.3",
+    "types": "^0.1.1",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "6.0.5",
+    "vite": "8.1.5"
+  }
+}

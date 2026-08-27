@@ -1,0 +1,13 @@
+{
+  "name": "react-redux-node-mysql-jwt",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack authentication and user management sample using React, Redux Toolkit, Node.js, Express, MySQL, and JWT.",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "start:server": "npm start --prefix server",
+    "build:client": "npm run build --prefix client"
+  }
+}

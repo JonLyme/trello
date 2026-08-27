@@ -1,0 +1,2 @@
+import { configureStore } from '@reduxjs/toolkit';import authReducer from '../features/auth/authSlice.js';import todosReducer from '../features/todos/todosSlice.js';import usersReducer from '../features/users/usersSlice.js';import workplacesReducer from '../features/workplaces/workplacesSlice.js';
+export const store=configureStore({reducer:{auth:authReducer,users:usersReducer,workplaces:workplacesReducer,todos:todosReducer}});

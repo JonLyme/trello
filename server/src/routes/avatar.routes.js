@@ -1,0 +1,15 @@
+import crypto from 'crypto';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { Router } from 'express';
+import multer from 'multer';
+import { uploadAvatar } from '../controllers/avatar.controller.js';
+import { requireAuth } from '../middleware/auth.js';
+const router = Router();
+const uploadDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../public/avatar');
+fs.mkdirSync(uploadDir, { recursive: true });
+const ext = { 'image/png': '.png', 'image/jpeg': '.jpg', 'image/webp': '.webp' };
+const upload = multer({ storage: multer.diskStorage({ destination: (_r, _f, cb) => cb(null, uploadDir), filename: (_r, file, cb) => cb(null, `${crypto.randomUUID()}${ext[file.mimetype] || ''}`) }), limits: { fileSize: 5 * 1024 * 1024, files: 1 }, fileFilter: (_r, file, cb) => ext[file.mimetype] ? cb(null, true) : cb(new Error('Use a JPEG, PNG, or WebP avatar.')) });
+router.post('/', requireAuth, upload.single('avatar'), uploadAvatar);
+export default router;
